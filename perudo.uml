@@ -256,7 +256,7 @@
 <XPD:REF name="Views[1]">k12D0VFyIU6wh6Te0SUojwAA</XPD:REF>
 <XPD:REF name="Views[2]">Pez15L6bykKdbpHSfkCjxgAA</XPD:REF>
 <XPD:REF name="Views[3]">CAt5SqjWbE2PvBZQ6CfYEAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">6</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="imk9p96+qkqWiLoAQ0g7hgAA">
 <XPD:ATTR name="Name" type="string">Bet</XPD:ATTR>
 <XPD:REF name="Owner">1xM1NdXrz0CeiAMpmx3agAAA</XPD:REF>
@@ -285,19 +285,6 @@
 <XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="+Br5GmdjB0yVrPZE2VfADQAA">
 <XPD:ATTR name="Name" type="string">int value</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">pblyplfzZUC2Mfcy6QcqVAAA</XPD:REF>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:OBJ name="Operations[5]" type="UMLOperation" guid="ndU7MSpw70SoaH4NtIKqNgAA">
-<XPD:ATTR name="Name" type="string">bool operator==</XPD:ATTR>
-<XPD:REF name="Owner">1xM1NdXrz0CeiAMpmx3agAAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="wiffkaH1bUGDGFzByTFKXAAA">
-<XPD:ATTR name="Name" type="string">Bet a</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">ndU7MSpw70SoaH4NtIKqNgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="2A7SBpSwLEuu0012tJrNeAAA">
-<XPD:ATTR name="Name" type="string">Bet b</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">ndU7MSpw70SoaH4NtIKqNgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>

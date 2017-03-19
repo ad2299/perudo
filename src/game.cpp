@@ -1,24 +1,21 @@
 #include "game.hpp"
 
-using namespace Game;
-
 // TODO ALL
 
-Game () {}
+Game::Game (int nb_players) {}
+Game::~Game () {}
 
-~Game () {}
-
-bool game_over ()
+bool Game::game_over ()
 {
   return false;
 }
 
-void player_lose () {}
-void change_bet () {}
-void you_lie () {}
-void right_count () {}
+void Game::change_bet (int const & count, int const & value) {}
+void Game::you_lie () {}
+void Game::right_count () {}
 
 int main (void)
 {
+  cout << "Hello, world!" << endl;
   return 0;
 }

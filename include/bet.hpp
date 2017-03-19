@@ -22,14 +22,16 @@ public:
   int get_value () const;
 
   /**
-   * @Param : count doit etre comprit entre 1 et 10
+   * @Param : count ne peut pas etre negatif mais n'a pas de maximum.
    * @Param : value doit etre comprit entre 1 et 6.
    * Cette fonction a pour but de gerer les deux valeurs de la mise en meme temps.
    * Elle devra gerer le fait que la mise sur la valeur soit comprise entre 1 et 6 puis que
-   * la mise sur le nombre de des soit comprise entre 1 et 10. Si les parametres sont corrects
+   * la mise sur le nombre de des soit positive ou nulle. Si les parametres sont corrects
    * la fonction renvoie vrai, sinon faux.
+   * si la variable palifico est vraie, voir les regles du jeu (game.hpp) pour calculer
+   * la mise. (section palifico)
    **/
-  bool set_bet (int const & count, int const & value);
+  bool set_bet (int const & count, int const & value, bool palifico);
   
 private:
 

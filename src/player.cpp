@@ -1,23 +1,22 @@
 #include "player.hpp"
 
-using namespace Player;
-
 // TODO ALL
 
-Player () {}
-~Player () {}
+Player::Player () {}
+Player::~Player () {}
 
-int dice_nb () const
+int Player::dice_nb () const
 {
   return -1;
 }
 
-vector<int> get_dices_value ()
+vector<int> Player::get_dices_value ()
 {
-  return NULL;
+  vector<int> v_null;
+  return v_null;
 }
 
-void roll_dices () {}
+void Player::roll_dices () {}
 
-operator ++ () {}
-operator -- () {}
+Player::operator ++ () {}
+Player::operator -- () {}
