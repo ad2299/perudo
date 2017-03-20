@@ -1,11 +1,7 @@
 
 #include "bet.hpp"
 
-Bet::Bet ()
-{
-  this->_count_bet = 0;
-  this->_value_bet = 0;
-}
+Bet::Bet (): _count_bet (0), _value_bet (0) {}
 
 Bet::~Bet () {}
 

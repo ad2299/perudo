@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 #define STARTING_DICE_COUNT 5
 #define MAXIMUM_DICES 10
+#define MINIMUM_DICES 1
 
 using namespace std;
 
@@ -58,6 +61,11 @@ public:
   operator--();
   
 private:
+
+  /**
+   * Cet vecteur doit etre initialise grace a la valeur STARTING_DICE_COUNT pour la taille et ses
+   * cases initialies a 0.
+   **/
   vector<int> _dices_value;
 };
 
