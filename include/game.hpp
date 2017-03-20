@@ -85,6 +85,8 @@ public:
    * Fait appel a la methode de la classe Bet pour changer les valeurs de la mise. Cette methode ne
    * prend pas fin tant que le joueur n a pas saisi des valeurs correctes (gestion des valeurs dans
    * Bet::set_value())
+   * Cette methode prend la valeur de tout les des de tout les joueurs pour les donner a Bet::set_value().
+   * Il faudra prendre en compte le tour palifico.
    * Une fois que la mise est correcte, met a jour la donne membre _turn (++_turn%_players::size).
    **/
   void change_bet (int const & count, int const & value);

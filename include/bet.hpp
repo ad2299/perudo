@@ -31,7 +31,7 @@ public:
    * si la variable palifico est vraie, voir les regles du jeu (game.hpp) pour calculer
    * la mise. (section palifico)
    **/
-  bool set_bet (int const & count, int const & value, bool palifico);
+  bool set_bet (int const & count, int const & value);
   
 private:
 

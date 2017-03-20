@@ -1,3 +1,4 @@
+
 #include "bet.hpp"
 
 Bet::Bet ()
@@ -18,7 +19,17 @@ Bet::get_value () const
   return _value_bet;
 }
 
-bool set_bet (int const & count, int const & value, bool palifico)
+bool Bet::set_bet (int const & count, int const & value)
 {
+  if (count > 0)
+    {
+      _count_bet = count;
+      return true;
+    }
+  if (value > 0 && value < 7)
+    {
+      _value_bet = value;
+      return true;
+    } 
   return false;
 }
