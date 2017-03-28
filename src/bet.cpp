@@ -1,16 +1,16 @@
-
 #include "bet.hpp"
+
 
 Bet::Bet (): _count_bet (0), _value_bet (0) {}
 
 Bet::~Bet () {}
 
-Bet::get_count () const
+int Bet::get_count () const
 {
   return _count_bet;
 }
 
-Bet::get_value () const
+int Bet::get_value () const
 {
   return _value_bet;
 }

@@ -52,13 +52,13 @@ public:
    * Surcharge de l operateur ++, celui ci augmentera la taille du vecteur de 1 puis initialisera
    * la valeur de la nouvelle case a 0. La taille du vecteur ne doit pas depasser MAXIMUM_DICES.
    **/
-  operator++();
+  Player operator++();
   
   /**
    * Surcharge de l operateur --, celui ci diminura la taille du vecteur de 1. Ne fait rien si la
    * taille du vecteur est egal a 0.
    **/
-  operator--();
+  Player operator--();
   
 private:
 

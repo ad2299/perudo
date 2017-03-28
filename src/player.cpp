@@ -28,7 +28,7 @@ void Player::roll_dices ()
     }
 }
 
-Player::operator ++ ()
+Player Player::operator ++ ()
 {
   if (_dices_value.size () <= MAXIMUM_DICES)
     {
@@ -36,7 +36,7 @@ Player::operator ++ ()
     }
 }
 
-Player::operator -- ()
+Player Player::operator -- ()
 {
   if (_dices_value.size() <= MINIMUM_DICES)
     {
