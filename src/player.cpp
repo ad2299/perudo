@@ -10,7 +10,7 @@ int Player::dice_nb () const
 
 vector<int> Player::get_dices_value ()
 {
-  // Normalement ça copie bien...
+  // Normalement la copie se deroule bien...
   vector<int> v_ret = _dices_value;
   return v_ret;
 }
