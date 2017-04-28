@@ -49,9 +49,17 @@ public:
   void roll_dices();
 
   /**
+   * Renvoie le nombre d'occurences dans le vecteur membre de la valeur 'value'.
+   * Si palifico est vrai, il ne prends pas en compte les 1.
+   **/
+  
+  int occ_nb (int value, bool palifico);
+  
+  /**
    * Surcharge de l operateur ++, celui ci augmentera la taille du vecteur de 1 puis initialisera
    * la valeur de la nouvelle case a 0. La taille du vecteur ne doit pas depasser MAXIMUM_DICES.
    **/
+  
   Player operator++();
   
   /**

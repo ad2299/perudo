@@ -111,10 +111,18 @@ public:
    **/
   void right_count();
 
+  bool eval_bet (const int & mode);
 private:
-  vector<Player> _players;
+  /**
+   * Evalue la mise courante selon le mode et le palifico
+   * Le mode est un entier à deux valeurs possibles (1 ou 0).
+   * renvoie true en cas de gain de de, false dans l'autre cas.
+   **/
+ 
+  
+  vector<Player*> _players;
   bool _is_palifico;
-  Bet _bet;
+  Bet* _bet;
   int _turn;
 };
 

@@ -1,6 +1,5 @@
 #include "player.hpp"
 
-
 Player::Player () : _dices_value (5){}
 Player::~Player () {}
 
@@ -26,6 +25,21 @@ void Player::roll_dices ()
       random = rand() % 6;
       _dices_value.at(i) = random;
     }
+}
+
+int Player::occ_nb (int value, bool palifico)
+{
+  int count = 0;
+  int i;
+  if (!palifico)
+    {
+      for (i=0; i<_dices_value.size(); ++i)
+	if (_dices_value.at(i) == value || _dices_value.at(i) == 1) {++count;}
+    }
+  else
+    for (i=0; i<_dices_value.size(); ++i)
+      if (_dices_value.at(i) == value) ++count;
+  return count;
 }
 
 Player Player::operator ++ ()
