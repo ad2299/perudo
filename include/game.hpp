@@ -69,72 +69,72 @@ using namespace std;
 class Game
 {
 public:
-  /**
-   * @Param : le nombre de joueurs de depart de la partie.
-   * Le vecteur de joueur devra etre instancie avec nb_player "cases".
-   * _is_palifico devra etre initialise a false.
-   * _bet devra etre instancie.
-   * _turn devra etre initialise a 0.
-   **/
-  Game(int nb_players);
-
-  /**
-   * Doit faire appel aux destructeur de vector et de Bet.
-   **/
-  ~Game();
-
-  /**
-   * @return : La fonction renvoie false si il reste plus d un joueur dans la
-   * partie (vector::size > 1) et true dans le cas inverse.
-   **/
-  bool game_over();
-
-  /**
-   * Fait appel a la methode de la classe Bet pour changer les valeurs de la
-   * mise. Cette methode ne prend pas fin tant que le joueur n a pas saisi des
-   * valeurs correctes (gestion des valeurs dans Bet::set_value()) Cette methode
-   * prend la valeur de tout les des de tout les joueurs pour les donner a 
-   * Bet::set_value(). Il faudra prendre en compte le tour palifico. Une fois
-   *  que la mise est correcte, met a jour la donne membre 
-   * _turn (++_turn%_players::size).
-   **/
-  void change_bet (int const & count, int const & value);
-  
-  /**
-   * Verrifie tout les des de tout les joueurs. En suivant les regles enumeres 
-   * en debut de cet en tete, fait perdre un de a un des deux joueurs concerne :
-   * la mise est correcte, le joueur d indice _turn perd un de, sinon celui
-   * d indice (_turn - 1)%_players::size perd un de. Si le joueur qui perd un de
-   * se retrouve a un seul de, la variable _is_palifico est changee en true si 
-   * elle est egal a false. Si un joueur n a plus de des, mettre a jour le
-   * vecteur membre.
-   **/
-  void you_lie();
-
-  /**
-   * Verrifie si la mise actuelle correspond exactement a la valeur reelle 
-   * (celle des joueurs). si oui, le joueur d indice _turn gagne un de et cette 
-   * meme variable ne change pas, sinon il perd un de et le joueur precedent 
-   * commence (decrementer la variable _turn).
-   * Rqe : comme pour les fonctions precedentes, il faut verrifier si la manche 
-   * suivant sera palifico et si un joueur a perdu. il faut aussi penser a la
-   *  gestion de la donne membre booleenne.
-   **/
-  void right_count();
-
-  bool eval_bet (const int & mode);
+    /**
+     * @Param : le nombre de joueurs de depart de la partie.
+     * Le vecteur de joueur devra etre instancie avec nb_player "cases".
+     * _is_palifico devra etre initialise a false.
+     * _bet devra etre instancie.
+     * _turn devra etre initialise a 0.
+     **/
+    Game(int nb_players);
+    
+    /**
+     * Doit faire appel aux destructeur de vector et de Bet.
+     **/
+    ~Game();
+    
+    /**
+     * @return : La fonction renvoie false si il reste plus d un joueur dans la
+     * partie (vector::size > 1) et true dans le cas inverse.
+     **/
+    bool game_over();
+    
+    /**
+     * Fait appel a la methode de la classe Bet pour changer les valeurs de la
+     * mise. Cette methode ne prend pas fin tant que le joueur n a pas saisi des
+     * valeurs correctes (gestion des valeurs dans Bet::set_value()) Cette 
+     * methode prend la valeur de tout les des de tout les joueurs pour les 
+     * donner a Bet::set_value(). Il faudra prendre en compte le tour palifico.
+     * Une fois que la mise est correcte, met a jour la donne membre 
+     * _turn(++_turn%_players::size).
+     **/
+    void change_bet (int const & count, int const & value);
+    
+    /**
+     * Verrifie tout les des de tout les joueurs. En suivant les regles enumeres
+     * en debut de cet en tete, fait perdre un de a un des deux joueurs 
+     * concerne : la mise est correcte, le joueur d indice _turn perd un de,
+     * sinon celui d indice (_turn - 1)%_players::size perd un de. Si le joueur
+     * qui perd un de se retrouve a un seul de, la variable _is_palifico est 
+     * changee en true si elle est egal a false. Si un joueur n a plus de des, 
+     * mettre a jour le vecteur membre.
+     **/
+    void you_lie();
+    
+    /**
+     * Verrifie si la mise actuelle correspond exactement a la valeur reelle 
+     * (celle des joueurs). si oui, le joueur d indice _turn gagne un de et 
+     * cette meme variable ne change pas, sinon il perd un de et le joueur
+     *  precedent commence (decrementer la variable _turn). Rqe : comme pour les
+     * fonctions precedentes, il faut verrifier si la manche suivant sera 
+     * palifico et si un joueur a perdu. il faut aussi penser a la gestion de la
+     * donne membre booleenne.
+     **/
+    void right_count();
+    
+    bool eval_bet (const int & mode);
 private:
-  /**
-   * Evalue la mise courante selon le mode et le palifico
-   * Le mode est un entier à deux valeurs possibles (1 ou 0).
-   * renvoie true en cas de gain de de, false dans l'autre cas.
-   **/
- 
-  
-  vector<Player*> _players;
-  bool _is_palifico;
-  Bet* _bet;
-  int _turn;
+    /**
+     * Evalue la mise courante selon le mode et le palifico
+     * Le mode est un entier à deux valeurs possibles (1 ou 0).
+     * renvoie true en cas de gain de de, false dans l'autre cas.
+     **/
+    
+    
+    vector<Player*> _players;
+    bool _is_palifico;
+    Bet* _bet;
+    int _turn;
 };
 
 #endif

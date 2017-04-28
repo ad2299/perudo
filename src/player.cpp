@@ -21,10 +21,10 @@ void Player::roll_dices ()
   int i, random;
   srand (time(0));
   for (i=0; i<=_dices_value.size(); ++i)
-    {
-      random = rand() % 6;
-      _dices_value.at(i) = random;
-    }
+  {
+    random = rand() % 6;
+    _dices_value.at(i) = random;
+  }
 }
 
 int Player::occ_nb (int value, bool palifico)
@@ -32,28 +32,28 @@ int Player::occ_nb (int value, bool palifico)
   int count = 0;
   int i;
   if (!palifico)
-    {
-      for (i=0; i<_dices_value.size(); ++i)
-	if (_dices_value.at(i) == value || _dices_value.at(i) == 1) {++count;}
-    }
+  {
+    for (i=0; i<_dices_value.size(); ++i)
+      if (_dices_value.at(i) == value || _dices_value.at(i) == 1) {++count;}
+  }
   else
     for (i=0; i<_dices_value.size(); ++i)
       if (_dices_value.at(i) == value) ++count;
-  return count;
+    return count;
 }
 
 Player Player::operator ++ ()
 {
   if (_dices_value.size () <= MAXIMUM_DICES)
-    {
-      _dices_value.push_back(0);
-    }
+  {
+    _dices_value.push_back(0);
+  }
 }
 
 Player Player::operator -- ()
 {
   if (_dices_value.size() <= MINIMUM_DICES)
-    {
-      _dices_value.resize(_dices_value.size()-1);
-    }
+  {
+    _dices_value.resize(_dices_value.size()-1);
+  }
 }

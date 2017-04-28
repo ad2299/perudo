@@ -18,14 +18,14 @@ int Bet::get_value () const
 bool Bet::set_bet (int const & count, int const & value)
 {
   if (count > 0)
-    {
-      _count_bet = count;
-      return true;
-    }
+  {
+    _count_bet = count;
+    return true;
+  }
   if (value > 0 && value < 7)
-    {
-      _value_bet = value;
-      return true;
-    } 
+  {
+    _value_bet = value;
+    return true;
+  } 
   return false;
 }
