@@ -8,9 +8,7 @@ Game::Game (int nb_players) : _players (0), _is_palifico (false), _bet (),
 {} 
 
 Game::~Game ()
-{ 
-  delete _bet;
-}
+{}
 
 bool Game::game_over ()
 {

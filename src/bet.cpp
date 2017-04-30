@@ -1,9 +1,6 @@
 #include "bet.hpp"
 
-
-Bet::Bet (): _count_bet (0), _value_bet (0) {}
-
-Bet::~Bet () {}
+Bet::Bet (): _count_bet (-1), _value_bet (-1) {}
 
 int Bet::get_count () const
 {

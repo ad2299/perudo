@@ -1,5 +1,11 @@
 #include "player.hpp"
 
+/* ==== SYMBOLIC CONSTANTS ==== */
+const int STARTING_DICE_COUNT = 5;
+const int MAXIMUM_DICES = 10;
+const int MINIMUM_DICES = 1;
+/* ==== SYMBOLIC CONSTANTS ==== */
+
 Player::Player () : _dices_value (5){}
 Player::~Player () {}
 
