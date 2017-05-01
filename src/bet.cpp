@@ -12,9 +12,10 @@ int Bet::get_value () const
   return _value_bet;
 }
 
+// Il faut completer cette methode.
 bool Bet::set_bet (int const & count, int const & value)
 {
-  if (count > 0)
+  if (count > _count_bet)
   {
     _count_bet = count;
     return true;
