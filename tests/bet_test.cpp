@@ -2,7 +2,7 @@
  * @file   bet_test.cpp
  * @author Probak
  * 
- * 
+ * @brief Fichier de tests
  */
 
 #include "bet_test.h"
@@ -18,6 +18,8 @@ void runTest ()
   Bet b ();
   CPPUNIT_ASSERT (b.get_count() == -1 && b.get_value() == -1);
   
-  // Test de la methode set_bet.
+  // Test de la methode check_bet.
+  
+  // Augmentation de la valeur et / ou le count.
   CPPUNIT_ASSERT ();
 }

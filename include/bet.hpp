@@ -9,6 +9,7 @@
  */
 
 #include <iostream>
+#include <math.h>
 /*!
  * @class Bet
  * @brief Gere la mise d un joueur.
@@ -17,8 +18,19 @@ class Bet
 {
 private:
     
-    int _count_bet;  /*!< Nombre de de sur le quel le dernier joueur mise. */
-    int _value_bet;  /*!< La valeur du de de la mise.                      */
+    int _count;  /*!< Nombre de de sur le quel le dernier joueur mise. */
+    int _value;  /*!< La valeur du de de la mise.                      */
+    
+    /*!
+     * @brief setter fonctionnant sur les deux donnes membres
+     * 
+     * Ce setter n est utilise que dans check_bet qui s occupe de verifier si
+     * les valeurs sont conformes aux regles du jeu.
+     * 
+     * @param count valeur a mettre dans _count.
+     * @param value valeur a mettre dans _value.
+     */
+    void set_bet (const int & count, const int & value) const;
     
 public:
     /*!
@@ -31,12 +43,12 @@ public:
     
     /*!
      * @brief getter classique.
-     * @return _count_bet.
+     * @return _count.
      */
     int get_count () const;
     /*!
      * @brief getter classique.
-     * @return _value_bet.
+     * @return _value.
      */
     int get_value () const;
     
@@ -54,7 +66,7 @@ public:
      * @Param value value doit etre comprit entre 1 et 6.
      * @return true si le changement est bien fait, false sinon.
      */
-    bool set_bet (int const & count, int const & value);
+    bool check_bet (const int & count, const int & value, const bool & palifico);
     
 };
 
