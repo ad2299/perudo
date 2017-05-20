@@ -27,7 +27,7 @@ bool Bet::check_bet (int const & count, int const & value, bool const & palifico
     if (!palifico)
     {
         //  Cas où la valeur n'est pas un toucan.  
-        if (value < TOUCAN)
+        if (value > TOUCAN)
         {
             /* On peut alors augmenter la valeur ou le count.
              * Il faut alors que la valeur soit inferieure a la valeur max des
