@@ -20,11 +20,8 @@ def misesuivante(a,x):
         listevaleur = [1] #1 est par défaut dans la liste car on pourra toujours utiliser les toucan (à part en palifico)
 
         for n in range (x,7):
-            print (n,x)
             if n !=1:
                 listevaleur.append(n)
-
-        #for m in range (1,len(listevaleur)
 
     return listevaleur
     
