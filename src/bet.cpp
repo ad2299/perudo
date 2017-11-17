@@ -35,14 +35,14 @@ bool Bet::check_bet (int const & count, int const & value, bool const & palifico
              * actuel */
             if (value <= MAX_DICE_VALUE && count > _count)
             {
-                set_bet (count, value);
+	      // set_bet (count, value);
                 return true;
             }
             /* On traite maintenant le cas ou l on veut changer des toucans 
              * aux valeurs numeriques. */
             if (value <= MAX_DICE_VALUE && count > ((_count*2) + 1))
             {
-                set_bet (count, value);
+	      //    set_bet (count, value);
                 return true;
             }
         }
@@ -54,12 +54,13 @@ bool Bet::check_bet (int const & count, int const & value, bool const & palifico
              * toucans.*/
             if (count > _count)
             {
-                set_bet (count, value);
+	      // set_bet (count, value);
                 return true;
             }
             if (count > (_count / 2))
+
             {
-                set_bet (count, value);
+	      //set_bet (count, value);
                 return true;
             }
         }
@@ -70,7 +71,7 @@ bool Bet::check_bet (int const & count, int const & value, bool const & palifico
     {
         if (value == _value && count > _count)
         {
-            set_bet (count, value);
+	  //            set_bet (count, value);
             return true;
         }
     }
